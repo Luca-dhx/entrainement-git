@@ -39,6 +39,61 @@
             color: #a0a0b0;
         }
 
+        nav {
+            margin-top: 16px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 8px 16px;
+            color: #e0e0e0;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+
+        nav ul li a:hover {
+            background-color: #e94560;
+            color: #fff;
+        }
+
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #16213e;
+            border: 1px solid #e94560;
+            border-radius: 4px;
+            min-width: 180px;
+            flex-direction: column;
+            z-index: 10;
+        }
+
+        nav ul li:hover ul {
+            display: flex;
+        }
+
+        nav ul li ul li a {
+            padding: 10px 16px;
+            border-radius: 0;
+        }
+
+        nav ul li ul li a:hover {
+            background-color: #e94560;
+        }
+
         main {
             max-width: 800px;
             width: 100%;
@@ -108,6 +163,26 @@
     <header>
         <h1>Entrainement Git</h1>
         <p>Une page simple pour pratiquer les commandes Git</p>
+        <nav>
+            <ul>
+                <li><a href="#apropos">Accueil</a></li>
+                <li>
+                    <a href="#commandes">Commandes</a>
+                    <ul>
+                        <li><a href="#commandes">Commandes de base</a></li>
+                        <li><a href="#commandes">Branches</a></li>
+                        <li><a href="#commandes">Merges</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#exercice">Ressources</a>
+                    <ul>
+                        <li><a href="#exercice">Exercices</a></li>
+                        <li><a href="#exercice">Documentation</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
     </header>
 
     <main>
